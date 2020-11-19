@@ -121,6 +121,8 @@ module DraftjsExporter
     end
 
     def atomic_class(name)
+      return unless name
+
       klass = "DraftjsExporter::Atomic::#{name.classify}"
 
       begin
